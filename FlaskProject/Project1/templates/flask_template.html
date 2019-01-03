@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block block_content %}
+	<h1>Hello, {{ user.name }}</h1>
+	{% if user.lang %}
+		<h1>The language you are using is {{ user.language }}.</h1>
+	{% else %}
+		<h1>The framework you are using is {{ user.framework }}</h1>
+	{% endif %}
+	<h3>Places I have visited:</h3>
+	<ul>
+		{% for item in items %}
+			<li>{{item.name}}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

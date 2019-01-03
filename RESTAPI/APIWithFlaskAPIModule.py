@@ -48,3 +48,18 @@ def notes_detail(key):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+
+
+#Now open another command prompt and call this api using CURLL
+'''
+$ curl -X GET http://127.0.0.1:5000/
+Response- [{"url": "http://127.0.0.1:5000/0/", "text": "do the shopping"}, {"url": "http://127.0.0.1:5000/1/", "text": "build the codez"}, {"url": 		"http://127.0.0.1:5000/2/", "text": "paint the door"}]
+$ curl -X GET http://127.0.0.1:5000/1/
+Response- {"url": "http://127.0.0.1:5000/1/", "text": "build the codez"}
+$ curl -X PUT http://127.0.0.1:5000/1/ -d text="flask api is teh awesomez"
+Response- {"url": "http://127.0.0.1:5000/1/", "text": "flask api is teh awesomez"}
+'''
